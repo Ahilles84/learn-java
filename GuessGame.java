@@ -17,21 +17,21 @@ public class GuessGame {
 		boolean p3isRigth = false;
 		
 		int targetNumber = (int) (Math.random() * 10);
-		System.out.println("ß çàãàäûâàþ ÷èñëî îò 0 äî 9...");
+		System.out.println("Я загадываю число от 0 до 9...");
 		
 		while(true) {
-			System.out.println("×èñëî, êîòîðîå íóæíî óãàäàòü, - " + targetNumber);
+			System.out.println("Число, которое нужно угадать, - " + targetNumber);
 			
 			p1.guess();
 			p2.guess();
 			p3.guess();
 			
 			guessp1 = p1.number;
-			System.out.println("Ïåðâûé èãðîê äóìàåò, ÷òî ýòî " + guessp1);
+			System.out.println("Первый игрок думает, что это " + guessp1);
 			guessp2 = p2.number;
-			System.out.println("Âòîðîé èãðîê äóìàåò, ÷òî ýòî " + guessp1);
+			System.out.println("Второй игрок думает, что это " + guessp1);
 			guessp3 = p3.number;
-			System.out.println("Òðåòèé èãðîê äóìàåò, ÷òî ýòî " + guessp1);
+			System.out.println("Третий игрок думает, что это " + guessp1);
 			
 			if (guessp1 == targetNumber) {
 				p1isRight = true;
@@ -44,14 +44,14 @@ public class GuessGame {
 			}	
 			
 			if (p1isRight || p2isRight || p3isRight) {
-				System.out.println("Ó íàñ åñòü ïîáåäèòåëü!");
-				System.out.println("Ïåðâûé èãðîê óãàäàë?" + p1isRight);
-				System.out.println("Âòîðîé èãðîê óãàäàë?" + p2isRight);
-				System.out.println("Òðåòèé èãðîê óãàäàë?" + p3isRight);
-				System.out.println("Êîíåö èãðû");
+				System.out.println("У нас есть победитель!");
+				System.out.println("Первый игрок угадал?" + p1isRight);
+				System.out.println("Второй игрок угадал?" + p2isRight);
+				System.out.println("Третий игрок угадал?" + p3isRight);
+				System.out.println("Конец игры");
 				break;
 				} else {
-					System.out.println("Èãðîêè äîëæíû ïîïðîáîâàòü åù¸ ðàç.");
+					System.out.println("Игроки должны попробовать ещё раз.");
 				}
 			}
 		}
@@ -61,11 +61,11 @@ public class Player {
 	int number = 0;
 	public void guess() {
 		number = (int) (Math.random() * 10);
-		System.out.println("Äóìàþ, ýòî ÷èñëî " + number);
+		System.out.println("Думаю, это число " + number);
 		}
 	}
 
-public class GameLauncher  {
+public class GameLauncher {
 	public static void main (String[] args) {
 		GuessGame game = new GuessGame();
 		game.startGame();
