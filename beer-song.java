@@ -1,20 +1,22 @@
 public class BeerSong {
 	public static void main (String[] argr) {
 		int beerNum = 99;
-		String word = "бутылок (бутылки)";
+		String word = "Р±СѓС‚С‹Р»РѕРє (Р±СѓС‚С‹Р»РєРё)";
 		while (beerNum >= 0) {
 			if (beerNum == 1, 21, 31, 41, 51, 61, 71, 81, 91) {
-				word = "бутылка";
+				word = "Р±СѓС‚С‹Р»РєР°";
 				}
-			System.out.println(beerNum + " " + word + " пива на столе");
-			System.out.println(beerNum + " " + word + " пива.");
-			System.out.println("Возьми одну.");
-			System.out.println("Пусти по кругу.");
+			System.out.println(beerNum + " " + word + " РїРёРІР° РЅР° СЃС‚РѕР»Рµ");
+			System.out.println(beerNum + " " + word + " РїРёРІР°.");
+			System.out.println("Р’РѕР·СЊРјРё РѕРґРЅСѓ.");
+			System.out.println("РџСѓСЃС‚Рё РїРѕ РєСЂСѓРіСѓ.");
 			beerNum = beerNum - 1;
 			if (beerNum == 0) {	
-				System.out.println("Нет бутылок пива на столе");
+				System.out.println("РќРµС‚ Р±СѓС‚С‹Р»РѕРє РїРёРІР° РЅР° СЃС‚РѕР»Рµ");
 				}
 			}
 		}
+	
+				
 	
 				
